@@ -9,9 +9,17 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * The type Storage.
+ */
 public class Storage {
     private File saveFile;
 
+    /**
+     * Instantiates a new Storage.
+     *
+     * @param filePath the file path
+     */
     public Storage(String filePath) {
         saveFile = new File(filePath);
     }
