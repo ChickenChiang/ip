@@ -17,6 +17,10 @@ import cluck.tasks.Task;
 public class Storage {
     private File saveFile;
 
+
+    public Storage() {
+        saveFile = new File("/CluckData/CluckSave.txt");
+    }
     /**
      * Instantiates a new Storage.
      *

@@ -1,5 +1,8 @@
 package cluck;
 
+import java.io.File;
+import java.net.URISyntaxException;
+import java.security.CodeSource;
 import java.util.Objects;
 
 import cluck.commands.Command;
@@ -27,8 +30,7 @@ public class Cluck {
     public Cluck() {
         this.taskList = new TaskList();
         this.ui = new Ui();
-        this.storage = new Storage("C:/Users/User/OneDrive - National University of Singapore/"
-                + "NUS/Y2S2/ip/data/CluckSave.txt");
+        this.storage = new Storage();
     }
 
     /**
@@ -41,6 +43,9 @@ public class Cluck {
         this.ui = new Ui();
         this.storage = new Storage(filePath);
         this.taskList = storage.readSave();
+    }
+    public void updateSaveFile() {
+        storage.writeSave(taskList);
     }
 
     /**
